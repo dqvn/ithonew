@@ -111,21 +111,15 @@ class LoginScreen extends GetWidget<LoginController> {
                                                         getHorizontalSize(0.50),
                                                     height: getVerticalSize(
                                                         1.28)))),
-                                    GestureDetector(
-                                        onTap: () {
-                                          onTapTxtSignUp();
-                                        },
-                                        child: Padding(
-                                            padding:
-                                                getPadding(left: 4, top: 1),
-                                            child: Text("lbl_ng_k_n_o".tr,
-                                                overflow: TextOverflow.ellipsis,
-                                                textAlign: TextAlign.left,
-                                                style: AppStyle
-                                                    .txtRalewayMedium15
-                                                    .copyWith(
-                                                        height: getVerticalSize(
-                                                            1.28)))))
+                                    Padding(
+                                        padding: getPadding(left: 4, top: 1),
+                                        child: Text("lbl_ng_k_n_o".tr,
+                                            overflow: TextOverflow.ellipsis,
+                                            textAlign: TextAlign.left,
+                                            style: AppStyle.txtRalewayMedium15
+                                                .copyWith(
+                                                    height:
+                                                        getVerticalSize(1.28))))
                                   ])),
                           Container(
                               height: getVerticalSize(31.00),
@@ -241,34 +235,7 @@ class LoginScreen extends GetWidget<LoginController> {
     Get.defaultDialog(
         onConfirm: () => Get.back(),
         title: "Lỗi Đăng Nhập",
-        middleText:
-            "Đăng nhập không đúng, vui lòng kiểm tra lại thông tin đăng nhập!");
-  }
-
-  onTapTxtSignUp() async {
-    //TODO Bind email and password controller to below variable
-    GotrueSessionResponse supabaseSignUpUser =
-        await Get.find<SupabaseClient>().auth.signUp(
-              "", // Bind email Controller
-              "", // Bind password Controller
-            );
-    if (supabaseSignUpUser.error != null) {
-      onErrorSupabaseSignUpResponse();
-    } else if (supabaseSignUpUser.data == null &&
-        supabaseSignUpUser.user == null) {
-      Get.snackbar('msg',
-          'Please check your email and follow the instructions to verify your email address.');
-    } else {
-      onSuccessSupabaseSignUpResponse(supabaseSignUpUser);
-    }
-  }
-
-  onSuccessSupabaseSignUpResponse(GotrueSessionResponse supabaseSignUpUser) {
-    Get.toNamed(AppRoutes.onboardingFourScreen);
-  }
-
-  onErrorSupabaseSignUpResponse() {
-    Get.toNamed(AppRoutes.onboardingFourScreen);
+        middleText: "Vui lòng thử lại");
   }
 
   onTapImgCamera() async {
