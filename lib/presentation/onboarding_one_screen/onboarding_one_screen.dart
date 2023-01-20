@@ -35,7 +35,7 @@ class OnboardingOneScreen extends GetWidget<OnboardingOneController> {
                           Container(
                               width: size.width,
                               padding: getPadding(
-                                  left: 33, top: 33, right: 33, bottom: 55),
+                                  left: 33, top: 33, right: 33, bottom: 35),
                               decoration: AppDecoration.fillWhiteA700.copyWith(
                                   borderRadius:
                                       BorderRadiusStyle.customBorderTL64),

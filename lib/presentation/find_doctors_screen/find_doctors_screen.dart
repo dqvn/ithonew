@@ -236,7 +236,7 @@ class FindDoctorsScreen extends GetWidget<FindDoctorsController> {
                                 width: getHorizontalSize(
                                   1.00,
                                 ),
-                                strokeAlign: StrokeAlign.center,
+                                //strokeAlign: StrokeAlign.center,
                               ),
                             ),
                           ),
