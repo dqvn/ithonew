@@ -82,12 +82,14 @@ class OnboardingThreeScreen extends GetWidget<OnboardingThreeController> {
                                         margin: getMargin(top: 54, bottom: 4),
                                         fontStyle:
                                             ButtonFontStyle.InterSemiBold16,
-                                        onTap: navigatetomainpage)
+                                        onTap: onTapVovicngay)
                                   ])))
                     ])))));
   }
 
   navigatetomainpage() {
     Get.toNamed(AppRoutes.onboardingFourScreen); //findDoctorsScreen
+  onTapVovicngay() {
+    Get.toNamed(AppRoutes.findDoctorsScreen);
   }
 }

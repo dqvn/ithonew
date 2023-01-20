@@ -99,13 +99,13 @@ class OnboardingTwoScreen extends GetWidget<OnboardingTwoController> {
                                                   text: "lbl_ti_p_t_c".tr,
                                                   fontStyle: ButtonFontStyle
                                                       .InterSemiBold16,
-                                                  onTap: navigateto3screen)
+                                                  onTap: onTapTiptc)
                                             ]))
                                   ]))
                         ])))));
   }
 
-  navigateto3screen() {
+  onTapTiptc() {
     Get.toNamed(AppRoutes.onboardingThreeScreen);
   }
 }
