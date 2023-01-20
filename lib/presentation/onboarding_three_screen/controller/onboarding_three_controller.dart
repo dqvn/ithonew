@@ -7,6 +7,7 @@ class OnboardingThreeController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+    Get.toNamed(AppRoutes.onboardingFourScreen);
   }
 
   @override

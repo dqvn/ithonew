@@ -88,6 +88,6 @@ class OnboardingThreeScreen extends GetWidget<OnboardingThreeController> {
   }
 
   onTapVovicngay() {
-    Get.toNamed(AppRoutes.findDoctorsScreen);
+    Get.toNamed(AppRoutes.onboardingFourScreen);
   }
 }
