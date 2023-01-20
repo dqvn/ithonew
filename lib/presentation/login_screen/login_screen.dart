@@ -7,6 +7,7 @@ import 'package:itho_new/widgets/app_bar/appbar_subtitle_2.dart';
 import 'package:itho_new/widgets/app_bar/custom_app_bar.dart';
 import 'package:itho_new/widgets/custom_button.dart';
 import 'package:itho_new/widgets/custom_text_form_field.dart';
+import 'package:supabase/supabase.dart';
 
 // ignore_for_file: must_be_immutable
 class LoginScreen extends GetWidget<LoginController> {
@@ -92,7 +93,8 @@ class LoginScreen extends GetWidget<LoginController> {
                               height: 56,
                               width: 327,
                               text: "lbl_ng_nh_p".tr,
-                              margin: getMargin(top: 32)),
+                              margin: getMargin(top: 32),
+                              onTap: signinwithsupabase),
                           Padding(
                               padding: getPadding(top: 26),
                               child: Row(
@@ -109,15 +111,21 @@ class LoginScreen extends GetWidget<LoginController> {
                                                         getHorizontalSize(0.50),
                                                     height: getVerticalSize(
                                                         1.28)))),
-                                    Padding(
-                                        padding: getPadding(left: 4, top: 1),
-                                        child: Text("lbl_ng_k_n_o".tr,
-                                            overflow: TextOverflow.ellipsis,
-                                            textAlign: TextAlign.left,
-                                            style: AppStyle.txtRalewayMedium15
-                                                .copyWith(
-                                                    height:
-                                                        getVerticalSize(1.28))))
+                                    GestureDetector(
+                                        onTap: () {
+                                          signupwithsupabase();
+                                        },
+                                        child: Padding(
+                                            padding:
+                                                getPadding(left: 4, top: 1),
+                                            child: Text("lbl_ng_k_n_o".tr,
+                                                overflow: TextOverflow.ellipsis,
+                                                textAlign: TextAlign.left,
+                                                style: AppStyle
+                                                    .txtRalewayMedium15
+                                                    .copyWith(
+                                                        height: getVerticalSize(
+                                                            1.28)))))
                                   ])),
                           Container(
                               height: getVerticalSize(31.00),
@@ -209,6 +217,58 @@ class LoginScreen extends GetWidget<LoginController> {
                               prefixConstraints: BoxConstraints(
                                   maxHeight: getVerticalSize(56.00)))
                         ])))));
+  }
+
+  signinwithsupabase() async {
+    //TODO Bind email and password controller to below variable
+    GotrueSessionResponse supabaseSignInUser =
+        await Get.find<SupabaseClient>().auth.signIn(
+              email: "", // Bind email Controller
+              password: "", // Bind password Controller
+            );
+    if (supabaseSignInUser.error != null) {
+      onErrorSupabaseSignInResponse();
+    } else {
+      onSuccessSupabaseSignInResponse(supabaseSignInUser);
+    }
+  }
+
+  onSuccessSupabaseSignInResponse(GotrueSessionResponse supabaseSignInUser) {
+    Get.toNamed(AppRoutes.findDoctorsScreen);
+  }
+
+  onErrorSupabaseSignInResponse() {
+    Get.defaultDialog(
+        onConfirm: () => Get.back(),
+        title: "Lỗi Đăng Nhập",
+        middleText:
+            "Đăng nhập không đúng, vui lòng kiểm tra lại thông tin đăng nhập!");
+  }
+
+  signupwithsupabase() async {
+    //TODO Bind email and password controller to below variable
+    GotrueSessionResponse supabaseSignUpUser =
+        await Get.find<SupabaseClient>().auth.signUp(
+              "", // Bind email Controller
+              "", // Bind password Controller
+            );
+    if (supabaseSignUpUser.error != null) {
+      onErrorSupabaseSignUpResponse();
+    } else if (supabaseSignUpUser.data == null &&
+        supabaseSignUpUser.user == null) {
+      Get.snackbar('msg',
+          'Please check your email and follow the instructions to verify your email address.');
+    } else {
+      onSuccessSupabaseSignUpResponse(supabaseSignUpUser);
+    }
+  }
+
+  onSuccessSupabaseSignUpResponse(GotrueSessionResponse supabaseSignUpUser) {
+    Get.toNamed(AppRoutes.onboardingFourScreen);
+  }
+
+  onErrorSupabaseSignUpResponse() {
+    Get.toNamed(AppRoutes.onboardingFourScreen);
   }
 
   onTapImgCamera() async {

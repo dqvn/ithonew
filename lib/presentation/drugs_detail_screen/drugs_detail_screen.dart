@@ -249,7 +249,7 @@ class DrugsDetailScreen extends GetWidget<DrugsDetailController> {
                       TextSpan(
                         text: "msg_obh_combi_is_a2".tr,
                         style: TextStyle(
-                          color: ColorConstant.blueGray40001,
+                          color: ColorConstant.fromHex("#898a8d"),
                           fontSize: getFontSize(
                             12,
                           ),
@@ -263,7 +263,7 @@ class DrugsDetailScreen extends GetWidget<DrugsDetailController> {
                       TextSpan(
                         text: "lbl_read_more".tr,
                         style: TextStyle(
-                          color: ColorConstant.blue600,
+                          color: ColorConstant.fromHex("#227dde"),
                           fontSize: getFontSize(
                             12,
                           ),

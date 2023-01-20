@@ -98,6 +98,22 @@ class AppDecoration {
   static BoxDecoration get fillBlue600 => BoxDecoration(
         color: ColorConstant.blue600,
       );
+  static BoxDecoration get gradientBlue700WhiteA700 => BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment(
+            -0.5,
+            0,
+          ),
+          end: Alignment(
+            -0.5,
+            1,
+          ),
+          colors: [
+            ColorConstant.blue700,
+            ColorConstant.whiteA700,
+          ],
+        ),
+      );
   static BoxDecoration get outlineBlack9003f => BoxDecoration();
   static BoxDecoration get fillRed50 => BoxDecoration(
         color: ColorConstant.red50,

@@ -203,7 +203,7 @@ class DoctorDetailScreen extends GetWidget<DoctorDetailController> {
                       TextSpan(
                         text: "msg_lorem_ipsum_dolor2".tr,
                         style: TextStyle(
-                          color: ColorConstant.gray60001,
+                          color: ColorConstant.fromHex("#717784"),
                           fontSize: getFontSize(
                             12,
                           ),
@@ -217,7 +217,7 @@ class DoctorDetailScreen extends GetWidget<DoctorDetailController> {
                       TextSpan(
                         text: "lbl_read_more".tr,
                         style: TextStyle(
-                          color: ColorConstant.blue600,
+                          color: ColorConstant.fromHex("#227dde"),
                           fontSize: getFontSize(
                             12,
                           ),
