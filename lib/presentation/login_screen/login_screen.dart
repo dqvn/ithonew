@@ -94,7 +94,7 @@ class LoginScreen extends GetWidget<LoginController> {
                               width: 327,
                               text: "lbl_ng_nh_p".tr,
                               margin: getMargin(top: 32),
-                              onTap: signinwithsupabase),
+                              onTap: onTapNgnhp),
                           Padding(
                               padding: getPadding(top: 26),
                               child: Row(
@@ -113,7 +113,7 @@ class LoginScreen extends GetWidget<LoginController> {
                                                         1.28)))),
                                     GestureDetector(
                                         onTap: () {
-                                          signupwithsupabase();
+                                          onTapTxtSignUp();
                                         },
                                         child: Padding(
                                             padding:
@@ -219,7 +219,7 @@ class LoginScreen extends GetWidget<LoginController> {
                         ])))));
   }
 
-  signinwithsupabase() async {
+  onTapNgnhp() async {
     //TODO Bind email and password controller to below variable
     GotrueSessionResponse supabaseSignInUser =
         await Get.find<SupabaseClient>().auth.signIn(
@@ -245,7 +245,7 @@ class LoginScreen extends GetWidget<LoginController> {
             "Đăng nhập không đúng, vui lòng kiểm tra lại thông tin đăng nhập!");
   }
 
-  signupwithsupabase() async {
+  onTapTxtSignUp() async {
     //TODO Bind email and password controller to below variable
     GotrueSessionResponse supabaseSignUpUser =
         await Get.find<SupabaseClient>().auth.signUp(

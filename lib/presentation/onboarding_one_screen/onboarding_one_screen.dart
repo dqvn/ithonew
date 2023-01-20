@@ -99,13 +99,13 @@ class OnboardingOneScreen extends GetWidget<OnboardingOneController> {
                                                   text: "lbl_ti_p_t_c".tr,
                                                   fontStyle: ButtonFontStyle
                                                       .InterSemiBold16,
-                                                  onTap: navigatetonextscreen)
+                                                  onTap: onTapTiptc)
                                             ]))
                                   ]))
                         ])))));
   }
 
-  navigatetonextscreen() {
+  onTapTiptc() {
     Get.toNamed(AppRoutes.onboardingTwoScreen);
   }
 }

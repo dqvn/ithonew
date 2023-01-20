@@ -12,14 +12,13 @@ class OnboardingFourScreen extends GetWidget<OnboardingFourController> {
         body: Container(
           width: size.width,
           padding: getPadding(
-            left: 24,
-            top: 16,
-            right: 24,
-            bottom: 16,
+            left: 16,
+            top: 91,
+            right: 16,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               CustomImageView(
                 svgPath: ImageConstant.imgGroup230Blue600,
@@ -30,8 +29,7 @@ class OnboardingFourScreen extends GetWidget<OnboardingFourController> {
                   195.00,
                 ),
                 margin: getMargin(
-                  left: 57,
-                  top: 75,
+                  left: 65,
                 ),
               ),
               Container(
@@ -39,7 +37,7 @@ class OnboardingFourScreen extends GetWidget<OnboardingFourController> {
                   132.00,
                 ),
                 margin: getMargin(
-                  left: 86,
+                  left: 94,
                 ),
                 decoration: AppDecoration.outlineBlack9003f,
                 child: Column(
@@ -104,28 +102,22 @@ class OnboardingFourScreen extends GetWidget<OnboardingFourController> {
                   ),
                 ),
               ),
-              Spacer(),
               CustomButton(
                 height: 56,
                 width: 327,
                 text: "lbl_ng_nh_p".tr,
+                margin: getMargin(
+                  top: 47,
+                ),
               ),
-            ],
-          ),
-        ),
-        bottomNavigationBar: Padding(
-          padding: getPadding(
-            left: 24,
-            right: 23,
-            bottom: 60,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
               CustomButton(
                 height: 56,
                 width: 328,
                 text: "lbl_ng_k".tr,
+                margin: getMargin(
+                  top: 10,
+                  bottom: 5,
+                ),
                 variant: ButtonVariant.OutlineBlue600,
                 fontStyle: ButtonFontStyle.RalewaySemiBold16Blue600,
               ),
