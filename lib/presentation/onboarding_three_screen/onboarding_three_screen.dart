@@ -62,7 +62,7 @@ class OnboardingThreeScreen extends GetWidget<OnboardingThreeController> {
                                             height: getVerticalSize(8.00),
                                             margin: getMargin(top: 13),
                                             child: SmoothIndicator(
-                                                offset: 0,
+                                                offset: 2,
                                                 count: 3,
                                                 axisDirection: Axis.horizontal,
                                                 effect: ScrollingDotsEffect(
@@ -88,6 +88,6 @@ class OnboardingThreeScreen extends GetWidget<OnboardingThreeController> {
   }
 
   navigatetomainpage() {
-    Get.toNamed(AppRoutes.findDoctorsScreen);
+    Get.toNamed(AppRoutes.onboardingFourScreen); //findDoctorsScreen
   }
 }

@@ -60,7 +60,7 @@ class OnboardingTwoScreen extends GetWidget<OnboardingTwoController> {
                                             height: getVerticalSize(8.00),
                                             margin: getMargin(top: 12),
                                             child: SmoothIndicator(
-                                                offset: 0,
+                                                offset: 1,
                                                 count: 3,
                                                 axisDirection: Axis.horizontal,
                                                 effect: ScrollingDotsEffect(
