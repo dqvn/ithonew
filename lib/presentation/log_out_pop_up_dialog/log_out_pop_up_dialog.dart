@@ -33,7 +33,7 @@ class LogOutPopUpDialog extends StatelessWidget {
             ),
             color: ColorConstant.red50,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusStyle.circleBorder51,
+              borderRadius: BorderRadiusStyle.roundedBorder51,
             ),
             child: Container(
               height: getSize(
@@ -46,7 +46,7 @@ class LogOutPopUpDialog extends StatelessWidget {
                 all: 22,
               ),
               decoration: AppDecoration.fillRed50.copyWith(
-                borderRadius: BorderRadiusStyle.circleBorder51,
+                borderRadius: BorderRadiusStyle.roundedBorder51,
               ),
               child: Stack(
                 children: [
@@ -99,7 +99,7 @@ class LogOutPopUpDialog extends StatelessWidget {
               "lbl_cancel".tr,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.left,
-              style: AppStyle.txtInterSemiBold16Blue600.copyWith(
+              style: AppStyle.txtInterSemiBold16.copyWith(
                 height: getVerticalSize(
                   1.24,
                 ),

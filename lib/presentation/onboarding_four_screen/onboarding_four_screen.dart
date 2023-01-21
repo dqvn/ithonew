@@ -11,16 +11,16 @@ class OnboardingFourScreen extends GetWidget<OnboardingFourController> {
             backgroundColor: ColorConstant.whiteA700,
             body: Container(
                 width: size.width,
-                padding: getPadding(left: 16, top: 91, right: 16),
+                padding: getPadding(left: 16, right: 16),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomImageView(
                           svgPath: ImageConstant.imgGroup230Blue600,
                           height: getVerticalSize(137.00),
                           width: getHorizontalSize(195.00),
-                          margin: getMargin(left: 65)),
+                          margin: getMargin(left: 65, top: 15)),
                       Container(
                           width: getHorizontalSize(132.00),
                           margin: getMargin(left: 94),
@@ -31,8 +31,7 @@ class OnboardingFourScreen extends GetWidget<OnboardingFourController> {
                                 Text("lbl_ith".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
-                                    style: AppStyle
-                                        .txtSairaStencilOneRegular55Blue600
+                                    style: AppStyle.txtSairaStencilOneRegular55
                                         .copyWith(
                                             letterSpacing:
                                                 getHorizontalSize(5.00),
@@ -55,26 +54,45 @@ class OnboardingFourScreen extends GetWidget<OnboardingFourController> {
                               child: Text("msg_ng_nh_p_t_m".tr,
                                   maxLines: null,
                                   textAlign: TextAlign.center,
-                                  style: AppStyle.txtRalewayMedium16.copyWith(
-                                      letterSpacing: getHorizontalSize(0.50),
-                                      height: getVerticalSize(1.28))))),
+                                  style: AppStyle.txtRalewayMedium16Gray600
+                                      .copyWith(
+                                          letterSpacing:
+                                              getHorizontalSize(0.50),
+                                          height: getVerticalSize(1.28))))),
                       CustomButton(
                           height: 56,
                           width: 327,
                           text: "lbl_ng_nh_p".tr,
                           margin: getMargin(top: 47),
-                          onTap: navigatetologinscreen),
+                          fontStyle: ButtonFontStyle.RalewaySemiBold20,
+                          onTap: onTapNgnhp),
                       CustomButton(
                           height: 56,
                           width: 328,
-                          text: "lbl_ng_k".tr,
-                          margin: getMargin(top: 10, bottom: 5),
-                          variant: ButtonVariant.OutlineBlue600,
-                          fontStyle: ButtonFontStyle.RalewaySemiBold16Blue600)
-                    ]))));
+                          text: "lbl_ng_k_t_m_th".tr,
+                          margin: getMargin(top: 15),
+                          variant: ButtonVariant.OutlineBlue60001,
+                          fontStyle: ButtonFontStyle.RalewaySemiBold20Blue60001,
+                          onTap: onTapNgktmthOne)
+                    ])),
+            bottomNavigationBar: Padding(
+                padding: getPadding(left: 20, right: 27, bottom: 58),
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  CustomButton(
+                      height: 56,
+                      width: 328,
+                      text: "lbl_ng_k_l_m_th".tr,
+                      variant: ButtonVariant.OutlineBlueA200,
+                      fontStyle: ButtonFontStyle.RalewayRomanBold20)
+                ]))));
   }
 
-  navigatetologinscreen() {
+  onTapNgnhp() {
     Get.toNamed(AppRoutes.loginScreen);
+  }
+
+  onTapNgktmthOne() {
+    Get.toNamed(AppRoutes.signUpScreen);
   }
 }

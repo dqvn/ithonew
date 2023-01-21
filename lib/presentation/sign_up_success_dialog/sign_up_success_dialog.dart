@@ -31,7 +31,7 @@ class SignUpSuccessDialog extends StatelessWidget {
             margin: EdgeInsets.all(0),
             color: ColorConstant.gray50,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusStyle.circleBorder51,
+              borderRadius: BorderRadiusStyle.roundedBorder51,
             ),
             child: Container(
               height: getSize(
@@ -47,7 +47,7 @@ class SignUpSuccessDialog extends StatelessWidget {
                 bottom: 35,
               ),
               decoration: AppDecoration.fillGray50.copyWith(
-                borderRadius: BorderRadiusStyle.circleBorder51,
+                borderRadius: BorderRadiusStyle.roundedBorder51,
               ),
               child: Stack(
                 children: [

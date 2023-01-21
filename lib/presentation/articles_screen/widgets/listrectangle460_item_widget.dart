@@ -26,8 +26,8 @@ class Listrectangle460ItemWidget extends StatelessWidget {
             right: 8,
             bottom: 10,
           ),
-          decoration: AppDecoration.outlineBluegray501.copyWith(
-            borderRadius: BorderRadiusStyle.roundedBorder8,
+          decoration: AppDecoration.outlineBluegray50.copyWith(
+            borderRadius: BorderRadiusStyle.roundedBorder10,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -86,7 +86,7 @@ class Listrectangle460ItemWidget extends StatelessWidget {
                   "msg_comparing_the_astrazeneca".tr,
                   maxLines: null,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtRalewaySemiBold12Gray90001.copyWith(
+                  style: AppStyle.txtRalewaySemiBold12.copyWith(
                     height: getVerticalSize(
                       1.14,
                     ),

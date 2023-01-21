@@ -98,8 +98,8 @@ class MessageHistoryScreen extends GetWidget<MessageHistoryController> {
                   left: 1,
                   right: 1,
                 ),
-                decoration: AppDecoration.fillGray10002.copyWith(
-                  borderRadius: BorderRadiusStyle.roundedBorder8,
+                decoration: AppDecoration.fillGray10001.copyWith(
+                  borderRadius: BorderRadiusStyle.roundedBorder10,
                 ),
                 child: Row(
                   children: [
@@ -190,7 +190,7 @@ class MessageHistoryScreen extends GetWidget<MessageHistoryController> {
                   bottom: 8,
                 ),
                 decoration: BoxDecoration(
-                  color: ColorConstant.blue600,
+                  color: ColorConstant.blue60001,
                   borderRadius: BorderRadius.circular(
                     getHorizontalSize(
                       27.00,

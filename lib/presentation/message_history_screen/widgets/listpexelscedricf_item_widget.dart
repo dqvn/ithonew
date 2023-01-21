@@ -43,7 +43,7 @@ class ListpexelscedricfItemWidget extends StatelessWidget {
                 "msg_dr_marcus_horizon".tr,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
-                style: AppStyle.txtInterSemiBold16.copyWith(
+                style: AppStyle.txtInterSemiBold16Gray90001.copyWith(
                   height: getVerticalSize(
                     1.00,
                   ),
@@ -57,7 +57,7 @@ class ListpexelscedricfItemWidget extends StatelessWidget {
                   "msg_i_don_t_have_any".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtInterRegular12Gray500.copyWith(
+                  style: AppStyle.txtInterRegular12.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),
@@ -80,7 +80,7 @@ class ListpexelscedricfItemWidget extends StatelessWidget {
                 "lbl_10_24".tr,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
-                style: AppStyle.txtInterRegular12Gray700.copyWith(
+                style: AppStyle.txtInterRegular12Gray70001.copyWith(
                   height: getVerticalSize(
                     1.00,
                   ),
@@ -99,7 +99,7 @@ class ListpexelscedricfItemWidget extends StatelessWidget {
                   right: 4,
                   bottom: 1,
                 ),
-                decoration: AppDecoration.txtFillBlue600.copyWith(
+                decoration: AppDecoration.txtFillBlue60001.copyWith(
                   borderRadius: BorderRadiusStyle.txtRoundedBorder6,
                 ),
                 child: Text(

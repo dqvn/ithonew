@@ -19,7 +19,7 @@ class OnboardingThreeScreen extends GetWidget<OnboardingThreeController> {
                         begin: Alignment(-0.5, 0),
                         end: Alignment(-0.5, 1),
                         colors: [
-                      ColorConstant.blue60001,
+                      ColorConstant.blue600,
                       ColorConstant.blue700
                     ])),
                 child: Container(
@@ -37,19 +37,19 @@ class OnboardingThreeScreen extends GetWidget<OnboardingThreeController> {
                           child: Container(
                               width: size.width,
                               padding: getPadding(
-                                  left: 42, top: 31, right: 42, bottom: 31),
+                                  left: 42, top: 14, right: 42, bottom: 14),
                               decoration: AppDecoration.fillWhiteA700.copyWith(
                                   borderRadius:
                                       BorderRadiusStyle.customBorderTL64),
                               child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Container(
-                                        width: getHorizontalSize(246.00),
+                                        width: getHorizontalSize(274.00),
                                         margin: getMargin(left: 2),
-                                        child: Text("msg_k_t_n_i_nhanh_t_i".tr,
+                                        child: Text("msg_ng_d_ng_ith_n_i".tr,
                                             maxLines: null,
                                             textAlign: TextAlign.left,
                                             style: AppStyle.txtRalewayBold22
@@ -60,7 +60,6 @@ class OnboardingThreeScreen extends GetWidget<OnboardingThreeController> {
                                         alignment: Alignment.center,
                                         child: Container(
                                             height: getVerticalSize(8.00),
-                                            margin: getMargin(top: 13),
                                             child: SmoothIndicator(
                                                 offset: 0,
                                                 count: 3,
@@ -68,7 +67,7 @@ class OnboardingThreeScreen extends GetWidget<OnboardingThreeController> {
                                                 effect: ScrollingDotsEffect(
                                                     spacing: 4,
                                                     activeDotColor:
-                                                        ColorConstant.blue600,
+                                                        ColorConstant.blue60001,
                                                     dotColor:
                                                         ColorConstant.blue100,
                                                     dotHeight:
@@ -79,7 +78,7 @@ class OnboardingThreeScreen extends GetWidget<OnboardingThreeController> {
                                         height: 56,
                                         width: 291,
                                         text: "lbl_v_o_vi_c_ngay".tr,
-                                        margin: getMargin(top: 54, bottom: 4),
+                                        margin: getMargin(top: 54, bottom: 21),
                                         fontStyle:
                                             ButtonFontStyle.InterSemiBold16,
                                         onTap: onTapVovicngay)

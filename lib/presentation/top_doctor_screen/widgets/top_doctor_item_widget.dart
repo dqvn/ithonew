@@ -19,7 +19,7 @@ class TopDoctorItemWidget extends StatelessWidget {
         bottom: 7,
       ),
       decoration: AppDecoration.outlineGray200.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder11,
+        borderRadius: BorderRadiusStyle.roundedBorder10,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -51,7 +51,7 @@ class TopDoctorItemWidget extends StatelessWidget {
                   "msg_dr_marcus_horizon2".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtRalewaySemiBold18.copyWith(
+                  style: AppStyle.txtRalewaySemiBold18Gray90001.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),
@@ -65,7 +65,7 @@ class TopDoctorItemWidget extends StatelessWidget {
                     "lbl_chardiologist".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtRalewayMedium12Gray500.copyWith(
+                    style: AppStyle.txtRalewayMedium12.copyWith(
                       height: getVerticalSize(
                         1.00,
                       ),
@@ -96,7 +96,7 @@ class TopDoctorItemWidget extends StatelessWidget {
                           "lbl_4_7".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtRalewayMedium12.copyWith(
+                          style: AppStyle.txtRalewayMedium12Amber500.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),
@@ -115,7 +115,7 @@ class TopDoctorItemWidget extends StatelessWidget {
                     "lbl_800m_away".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtRalewayMedium12Gray500.copyWith(
+                    style: AppStyle.txtRalewayMedium12.copyWith(
                       height: getVerticalSize(
                         1.00,
                       ),

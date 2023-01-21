@@ -7,7 +7,8 @@ import 'package:itho_new/widgets/app_bar/appbar_subtitle_2.dart';
 import 'package:itho_new/widgets/app_bar/custom_app_bar.dart';
 import 'package:itho_new/widgets/custom_button.dart';
 import 'package:itho_new/widgets/custom_text_form_field.dart';
-import 'package:supabase/supabase.dart';
+import 'package:itho_new/presentation/login_success_dialog/login_success_dialog.dart';
+import 'package:itho_new/presentation/login_success_dialog/controller/login_success_controller.dart';
 
 // ignore_for_file: must_be_immutable
 class LoginScreen extends GetWidget<LoginController> {
@@ -43,6 +44,7 @@ class LoginScreen extends GetWidget<LoginController> {
                               focusNode: FocusNode(),
                               controller: controller.emailController,
                               hintText: "msg_nh_p_email_c_a_b_n".tr,
+                              padding: TextFormFieldPadding.PaddingT16,
                               textInputType: TextInputType.emailAddress,
                               prefix: Container(
                                   margin: getMargin(
@@ -64,7 +66,6 @@ class LoginScreen extends GetWidget<LoginController> {
                               controller: controller.passwordController,
                               hintText: "msg_nh_p_m_t_kh_u_c_a".tr,
                               margin: getMargin(top: 16),
-                              padding: TextFormFieldPadding.PaddingT17,
                               prefix: Container(
                                   margin: getMargin(
                                       left: 24, top: 16, right: 16, bottom: 16),
@@ -86,7 +87,8 @@ class LoginScreen extends GetWidget<LoginController> {
                                   child: Text("lbl_qu_n_m_t_kh_u".tr,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
-                                      style: AppStyle.txtRalewayMedium14
+                                      style: AppStyle
+                                          .txtRalewayMedium14Blue60001
                                           .copyWith(
                                               height: getVerticalSize(1.19))))),
                           CustomButton(
@@ -152,6 +154,7 @@ class LoginScreen extends GetWidget<LoginController> {
                               hintText: "msg_ng_nh_p_b_ng_google".tr,
                               margin: getMargin(top: 24),
                               variant: TextFormFieldVariant.OutlineGray200_1,
+                              padding: TextFormFieldPadding.PaddingT16,
                               fontStyle:
                                   TextFormFieldFontStyle.RalewaySemiBold16,
                               prefix: Container(
@@ -167,7 +170,7 @@ class LoginScreen extends GetWidget<LoginController> {
                                   left: 18, top: 17, right: 18, bottom: 17),
                               decoration: AppDecoration.outlineGray200.copyWith(
                                   borderRadius:
-                                      BorderRadiusStyle.roundedBorder8),
+                                      BorderRadiusStyle.roundedBorder10),
                               child: Row(children: [
                                 CustomImageView(
                                     svgPath: ImageConstant.imgCamera,
@@ -182,7 +185,8 @@ class LoginScreen extends GetWidget<LoginController> {
                                     child: Text("msg_ng_nh_p_b_ng_apple".tr,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
-                                        style: AppStyle.txtRalewaySemiBold16
+                                        style: AppStyle
+                                            .txtRalewaySemiBold16Gray900
                                             .copyWith(
                                                 height: getVerticalSize(1.28))))
                               ])),
@@ -194,6 +198,7 @@ class LoginScreen extends GetWidget<LoginController> {
                               hintText: "msg_ng_nh_p_b_ng_facebook".tr,
                               margin: getMargin(top: 16, bottom: 5),
                               variant: TextFormFieldVariant.OutlineGray200_1,
+                              padding: TextFormFieldPadding.PaddingT16,
                               fontStyle:
                                   TextFormFieldFontStyle.RalewaySemiBold16,
                               textInputAction: TextInputAction.done,
@@ -213,29 +218,17 @@ class LoginScreen extends GetWidget<LoginController> {
                         ])))));
   }
 
-  onTapNgnhp() async {
-    //TODO Bind email and password controller to below variable
-    GotrueSessionResponse supabaseSignInUser =
-        await Get.find<SupabaseClient>().auth.signIn(
-              email: "", // Bind email Controller
-              password: "", // Bind password Controller
-            );
-    if (supabaseSignInUser.error != null) {
-      onErrorSupabaseSignInResponse();
-    } else {
-      onSuccessSupabaseSignInResponse(supabaseSignInUser);
-    }
-  }
-
-  onSuccessSupabaseSignInResponse(GotrueSessionResponse supabaseSignInUser) {
-    Get.toNamed(AppRoutes.findDoctorsScreen);
-  }
-
-  onErrorSupabaseSignInResponse() {
-    Get.defaultDialog(
-        onConfirm: () => Get.back(),
-        title: "Lỗi Đăng Nhập",
-        middleText: "Vui lòng thử lại");
+  onTapNgnhp() {
+    Get.dialog(AlertDialog(
+      backgroundColor: Colors.transparent,
+      contentPadding: EdgeInsets.zero,
+      insetPadding: EdgeInsets.only(left: 0),
+      content: LoginSuccessDialog(
+        Get.put(
+          LoginSuccessController(),
+        ),
+      ),
+    ));
   }
 
   onTapImgCamera() async {

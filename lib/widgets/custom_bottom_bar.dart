@@ -61,7 +61,7 @@ class CustomBottomBar extends StatelessWidget {
                 width: getSize(
                   32.00,
                 ),
-                color: ColorConstant.blue600,
+                color: ColorConstant.blue60001,
               ),
               label: '',
             );

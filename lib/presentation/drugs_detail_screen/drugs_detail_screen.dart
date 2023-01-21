@@ -227,7 +227,7 @@ class DrugsDetailScreen extends GetWidget<DrugsDetailController> {
                   "lbl_description".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtRalewaySemiBold16Gray90001.copyWith(
+                  style: AppStyle.txtRalewaySemiBold16.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),
@@ -249,7 +249,7 @@ class DrugsDetailScreen extends GetWidget<DrugsDetailController> {
                       TextSpan(
                         text: "msg_obh_combi_is_a2".tr,
                         style: TextStyle(
-                          color: ColorConstant.fromHex("#898a8d"),
+                          color: ColorConstant.blueGray40001,
                           fontSize: getFontSize(
                             12,
                           ),
@@ -263,7 +263,7 @@ class DrugsDetailScreen extends GetWidget<DrugsDetailController> {
                       TextSpan(
                         text: "lbl_read_more".tr,
                         style: TextStyle(
-                          color: ColorConstant.fromHex("#227dde"),
+                          color: ColorConstant.blue60001,
                           fontSize: getFontSize(
                             12,
                           ),

@@ -61,7 +61,7 @@ class CustomRadioButton extends StatelessWidget {
     switch (fontStyle) {
       default:
         return TextStyle(
-          color: ColorConstant.gray700,
+          color: ColorConstant.gray70001,
           fontSize: getFontSize(
             14,
           ),
@@ -74,5 +74,5 @@ class CustomRadioButton extends StatelessWidget {
 }
 
 enum RadioFontStyle {
-  RalewayRegular14,
+  RalewayRegular14Gray70001,
 }

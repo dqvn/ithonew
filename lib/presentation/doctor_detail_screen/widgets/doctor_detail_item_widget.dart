@@ -26,14 +26,14 @@ class DoctorDetailItemWidget extends StatelessWidget {
             right: 25,
             bottom: 9,
           ),
-          decoration: AppDecoration.txtOutlineGray10001.copyWith(
+          decoration: AppDecoration.txtOutlineGray10002.copyWith(
             borderRadius: BorderRadiusStyle.txtRoundedBorder15,
           ),
           child: Text(
             "lbl_09_00_am".tr,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
-            style: AppStyle.txtRalewayRegular12.copyWith(
+            style: AppStyle.txtRalewayRegular12Gray400.copyWith(
               height: getVerticalSize(
                 1.00,
               ),
@@ -50,7 +50,7 @@ class DoctorDetailItemWidget extends StatelessWidget {
             right: 25,
             bottom: 10,
           ),
-          decoration: AppDecoration.txtOutlineBluegray10001.copyWith(
+          decoration: AppDecoration.txtOutlineBluegray100.copyWith(
             borderRadius: BorderRadiusStyle.txtRoundedBorder15,
           ),
           child: Text(
@@ -74,14 +74,14 @@ class DoctorDetailItemWidget extends StatelessWidget {
             right: 27,
             bottom: 10,
           ),
-          decoration: AppDecoration.txtOutlineGray10001.copyWith(
+          decoration: AppDecoration.txtOutlineGray10002.copyWith(
             borderRadius: BorderRadiusStyle.txtRoundedBorder15,
           ),
           child: Text(
             "lbl_11_00_am".tr,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
-            style: AppStyle.txtRalewayRegular12.copyWith(
+            style: AppStyle.txtRalewayRegular12Gray400.copyWith(
               height: getVerticalSize(
                 1.00,
               ),

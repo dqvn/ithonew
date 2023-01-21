@@ -96,7 +96,7 @@ class ScheduleTabContainerScreen
                   335.00,
                 ),
                 decoration: BoxDecoration(
-                  color: ColorConstant.gray10002,
+                  color: ColorConstant.gray10001,
                   borderRadius: BorderRadius.circular(
                     getHorizontalSize(
                       8.00,
@@ -119,7 +119,7 @@ class ScheduleTabContainerScreen
                   labelColor: ColorConstant.whiteA700,
                   unselectedLabelColor: ColorConstant.gray90001,
                   indicator: BoxDecoration(
-                    color: ColorConstant.blue600,
+                    color: ColorConstant.blue60001,
                     borderRadius: BorderRadius.circular(
                       getHorizontalSize(
                         8.00,

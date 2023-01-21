@@ -77,7 +77,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                 hintText: "msg_search_drugs_category".tr,
                 variant: TextFormFieldVariant.OutlineGray200_1,
                 padding: TextFormFieldPadding.PaddingT11,
-                fontStyle: TextFormFieldFontStyle.RalewayRegular12,
+                fontStyle: TextFormFieldFontStyle.RalewayRegular12Gray500,
                 textInputAction: TextInputAction.done,
                 prefix: Container(
                   margin: getMargin(
@@ -137,7 +137,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                       "lbl_popular_product".tr,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
-                      style: AppStyle.txtRalewaySemiBold16Gray90001.copyWith(
+                      style: AppStyle.txtRalewaySemiBold16.copyWith(
                         height: getVerticalSize(
                           1.00,
                         ),
@@ -151,7 +151,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                         "lbl_see_all".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtRalewayMedium14.copyWith(
+                        style: AppStyle.txtRalewayMedium14Blue60001.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),
@@ -210,7 +210,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                       "lbl_product_on_sale".tr,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
-                      style: AppStyle.txtRalewaySemiBold16Gray90001.copyWith(
+                      style: AppStyle.txtRalewaySemiBold16.copyWith(
                         height: getVerticalSize(
                           1.00,
                         ),
@@ -224,7 +224,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                         "lbl_see_all".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtRalewayMedium14.copyWith(
+                        style: AppStyle.txtRalewayMedium14Blue60001.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),

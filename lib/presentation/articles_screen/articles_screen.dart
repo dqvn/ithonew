@@ -80,7 +80,7 @@ class ArticlesScreen extends GetWidget<ArticlesController> {
                     ),
                     variant: TextFormFieldVariant.OutlineGray200_1,
                     padding: TextFormFieldPadding.PaddingT11,
-                    fontStyle: TextFormFieldFontStyle.RalewayRegular12,
+                    fontStyle: TextFormFieldFontStyle.RalewayRegular12Gray500,
                     textInputAction: TextInputAction.done,
                     prefix: Container(
                       margin: getMargin(
@@ -108,7 +108,7 @@ class ArticlesScreen extends GetWidget<ArticlesController> {
                       "msg_popular_articles".tr,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
-                      style: AppStyle.txtRalewaySemiBold16Gray90001.copyWith(
+                      style: AppStyle.txtRalewaySemiBold16.copyWith(
                         height: getVerticalSize(
                           1.00,
                         ),
@@ -166,8 +166,7 @@ class ArticlesScreen extends GetWidget<ArticlesController> {
                             "msg_trending_articles".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
-                            style:
-                                AppStyle.txtRalewaySemiBold16Gray90001.copyWith(
+                            style: AppStyle.txtRalewaySemiBold16.copyWith(
                               height: getVerticalSize(
                                 1.00,
                               ),
@@ -181,8 +180,7 @@ class ArticlesScreen extends GetWidget<ArticlesController> {
                               "lbl_see_all".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
-                              style:
-                                  AppStyle.txtRalewayRegular12Blue600.copyWith(
+                              style: AppStyle.txtRalewayRegular12.copyWith(
                                 height: getVerticalSize(
                                   1.00,
                                 ),
@@ -256,7 +254,7 @@ class ArticlesScreen extends GetWidget<ArticlesController> {
                             "lbl_see_all".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
-                            style: AppStyle.txtRalewayRegular12Blue600.copyWith(
+                            style: AppStyle.txtRalewayRegular12.copyWith(
                               height: getVerticalSize(
                                 1.00,
                               ),

@@ -116,7 +116,7 @@ class ChatWithDoctorScreen extends GetWidget<ChatWithDoctorController> {
                   bottom: 17,
                 ),
                 decoration: AppDecoration.outlineGray200.copyWith(
-                  borderRadius: BorderRadiusStyle.roundedBorder11,
+                  borderRadius: BorderRadiusStyle.roundedBorder10,
                 ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -126,7 +126,7 @@ class ChatWithDoctorScreen extends GetWidget<ChatWithDoctorController> {
                       "msg_consultion_start".tr,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
-                      style: AppStyle.txtRalewaySemiBold16Blue600.copyWith(
+                      style: AppStyle.txtRalewaySemiBold16Blue60001.copyWith(
                         height: getVerticalSize(
                           1.00,
                         ),
@@ -140,7 +140,7 @@ class ChatWithDoctorScreen extends GetWidget<ChatWithDoctorController> {
                         "msg_you_can_consult".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtRalewayMedium12Gray500.copyWith(
+                        style: AppStyle.txtRalewayMedium12.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),
@@ -236,7 +236,7 @@ class ChatWithDoctorScreen extends GetWidget<ChatWithDoctorController> {
                       "msg_hello_how_can_i".tr,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
-                      style: AppStyle.txtRalewayRegular14Gray700.copyWith(
+                      style: AppStyle.txtRalewayRegular14Gray70001.copyWith(
                         height: getVerticalSize(
                           1.00,
                         ),
@@ -255,7 +255,7 @@ class ChatWithDoctorScreen extends GetWidget<ChatWithDoctorController> {
                   padding: getPadding(
                     all: 6,
                   ),
-                  decoration: AppDecoration.fillBlue600.copyWith(
+                  decoration: AppDecoration.fillBlue60001.copyWith(
                     borderRadius: BorderRadiusStyle.customBorderTL8,
                   ),
                   child: Row(
@@ -388,7 +388,7 @@ class ChatWithDoctorScreen extends GetWidget<ChatWithDoctorController> {
                         "msg_ok_do_you_have".tr,
                         maxLines: null,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtRalewayRegular14Gray700.copyWith(
+                        style: AppStyle.txtRalewayRegular14Gray70001.copyWith(
                           height: getVerticalSize(
                             1.22,
                           ),
@@ -411,7 +411,7 @@ class ChatWithDoctorScreen extends GetWidget<ChatWithDoctorController> {
                     right: 5,
                     bottom: 6,
                   ),
-                  decoration: AppDecoration.fillBlue600.copyWith(
+                  decoration: AppDecoration.fillBlue60001.copyWith(
                     borderRadius: BorderRadiusStyle.customBorderTL8,
                   ),
                   child: Row(

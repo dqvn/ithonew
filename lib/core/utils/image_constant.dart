@@ -33,6 +33,8 @@ class ImageConstant {
   static String imgRectangle46087x113 =
       'assets/images/img_rectangle460_87x113.png';
 
+  static String imgGroup154 = 'assets/images/img_group154.svg';
+
   static String imgGroup141 = 'assets/images/img_group141.svg';
 
   static String imgLock = 'assets/images/img_lock.svg';
@@ -102,8 +104,6 @@ class ImageConstant {
       'assets/images/img_pexelscedricf_40x39.png';
 
   static String imgSettings = 'assets/images/img_settings.svg';
-
-  static String imgGroup1 = 'assets/images/img_group1.svg';
 
   static String imgBookmark = 'assets/images/img_bookmark.svg';
 

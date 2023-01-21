@@ -110,15 +110,6 @@ class CustomTextFormField extends StatelessWidget {
 
   _setFontStyle() {
     switch (fontStyle) {
-      case TextFormFieldFontStyle.RalewaySemiBold16:
-        return TextStyle(
-          color: ColorConstant.gray900,
-          fontSize: getFontSize(
-            16,
-          ),
-          fontFamily: 'Raleway',
-          fontWeight: FontWeight.w600,
-        );
       case TextFormFieldFontStyle.RalewayMedium16:
         return TextStyle(
           color: ColorConstant.gray900,
@@ -128,23 +119,23 @@ class CustomTextFormField extends StatelessWidget {
           fontFamily: 'Raleway',
           fontWeight: FontWeight.w500,
         );
-      case TextFormFieldFontStyle.RalewayRegular12:
+      case TextFormFieldFontStyle.RalewayRegular12Gray500:
         return TextStyle(
-          color: ColorConstant.blueGray300,
+          color: ColorConstant.gray500,
           fontSize: getFontSize(
             12,
           ),
           fontFamily: 'Raleway',
           fontWeight: FontWeight.w400,
         );
-      case TextFormFieldFontStyle.RalewayRegular14:
+      case TextFormFieldFontStyle.RalewaySemiBold16:
         return TextStyle(
-          color: ColorConstant.gray500,
+          color: ColorConstant.gray900,
           fontSize: getFontSize(
-            14,
+            16,
           ),
           fontFamily: 'Raleway',
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
         );
       case TextFormFieldFontStyle.RalewaySemiBold14:
         return TextStyle(
@@ -154,6 +145,15 @@ class CustomTextFormField extends StatelessWidget {
           ),
           fontFamily: 'Raleway',
           fontWeight: FontWeight.w600,
+        );
+      case TextFormFieldFontStyle.RalewayRegular14:
+        return TextStyle(
+          color: ColorConstant.gray500,
+          fontSize: getFontSize(
+            14,
+          ),
+          fontFamily: 'Raleway',
+          fontWeight: FontWeight.w400,
         );
       default:
         return TextStyle(
@@ -180,6 +180,14 @@ class CustomTextFormField extends StatelessWidget {
 
   _setBorderStyle() {
     switch (variant) {
+      case TextFormFieldVariant.OutlineBlue60001:
+        return OutlineInputBorder(
+          borderRadius: _setOutlineBorderRadius(),
+          borderSide: BorderSide(
+            color: ColorConstant.blue60001,
+            width: 1,
+          ),
+        );
       case TextFormFieldVariant.OutlineGray200_1:
         return OutlineInputBorder(
           borderRadius: _setOutlineBorderRadius(),
@@ -188,12 +196,10 @@ class CustomTextFormField extends StatelessWidget {
             width: 1,
           ),
         );
-      case TextFormFieldVariant.OutlineBlue600:
-        return OutlineInputBorder(
-          borderRadius: _setOutlineBorderRadius(),
+      case TextFormFieldVariant.UnderLineBluegray50:
+        return UnderlineInputBorder(
           borderSide: BorderSide(
-            color: ColorConstant.blue600,
-            width: 1,
+            color: ColorConstant.blueGray50,
           ),
         );
       case TextFormFieldVariant.OutlineBluegray50:
@@ -202,12 +208,6 @@ class CustomTextFormField extends StatelessWidget {
           borderSide: BorderSide(
             color: ColorConstant.blueGray50,
             width: 1,
-          ),
-        );
-      case TextFormFieldVariant.UnderLineBluegray50:
-        return UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: ColorConstant.blueGray50,
           ),
         );
       case TextFormFieldVariant.None:
@@ -238,14 +238,14 @@ class CustomTextFormField extends StatelessWidget {
     switch (variant) {
       case TextFormFieldVariant.OutlineGray200:
         return false;
-      case TextFormFieldVariant.OutlineGray200_1:
-        return true;
-      case TextFormFieldVariant.OutlineBlue600:
+      case TextFormFieldVariant.OutlineBlue60001:
         return false;
-      case TextFormFieldVariant.OutlineBluegray50:
+      case TextFormFieldVariant.OutlineGray200_1:
         return true;
       case TextFormFieldVariant.UnderLineBluegray50:
         return false;
+      case TextFormFieldVariant.OutlineBluegray50:
+        return true;
       case TextFormFieldVariant.None:
         return false;
       default:
@@ -255,10 +255,11 @@ class CustomTextFormField extends StatelessWidget {
 
   _setPadding() {
     switch (padding) {
-      case TextFormFieldPadding.PaddingT17:
+      case TextFormFieldPadding.PaddingT16:
         return getPadding(
-          top: 17,
-          bottom: 17,
+          top: 16,
+          right: 16,
+          bottom: 16,
         );
       case TextFormFieldPadding.PaddingT16_1:
         return getPadding(
@@ -268,9 +269,9 @@ class CustomTextFormField extends StatelessWidget {
         );
       case TextFormFieldPadding.PaddingT11:
         return getPadding(
-          top: 11,
-          right: 11,
-          bottom: 11,
+          top: 12,
+          right: 12,
+          bottom: 12,
         );
       case TextFormFieldPadding.PaddingT14:
         return getPadding(
@@ -281,7 +282,6 @@ class CustomTextFormField extends StatelessWidget {
       default:
         return getPadding(
           top: 16,
-          right: 16,
           bottom: 16,
         );
     }
@@ -293,8 +293,8 @@ enum TextFormFieldShape {
 }
 
 enum TextFormFieldPadding {
-  PaddingT16,
   PaddingT17,
+  PaddingT16,
   PaddingT16_1,
   PaddingT11,
   PaddingT14,
@@ -303,17 +303,17 @@ enum TextFormFieldPadding {
 enum TextFormFieldVariant {
   None,
   OutlineGray200,
+  OutlineBlue60001,
   OutlineGray200_1,
-  OutlineBlue600,
-  OutlineBluegray50,
   UnderLineBluegray50,
+  OutlineBluegray50,
 }
 
 enum TextFormFieldFontStyle {
   RalewayRegular16,
-  RalewaySemiBold16,
   RalewayMedium16,
-  RalewayRegular12,
-  RalewayRegular14,
+  RalewayRegular12Gray500,
+  RalewaySemiBold16,
   RalewaySemiBold14,
+  RalewayRegular14,
 }

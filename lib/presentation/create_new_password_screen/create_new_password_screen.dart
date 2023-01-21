@@ -74,7 +74,6 @@ class CreateNewPasswordScreen extends GetWidget<CreateNewPasswordController> {
                     margin: getMargin(
                       top: 24,
                     ),
-                    padding: TextFormFieldPadding.PaddingT17,
                     textInputType: TextInputType.visiblePassword,
                     prefix: Container(
                       margin: getMargin(
@@ -135,7 +134,6 @@ class CreateNewPasswordScreen extends GetWidget<CreateNewPasswordController> {
                     margin: getMargin(
                       top: 16,
                     ),
-                    padding: TextFormFieldPadding.PaddingT17,
                     textInputAction: TextInputAction.done,
                     textInputType: TextInputType.visiblePassword,
                     prefix: Container(

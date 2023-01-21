@@ -6,6 +6,8 @@ import 'package:itho_new/core/app_export.dart';
 import 'package:itho_new/presentation/home_page/home_page.dart';
 import 'package:itho_new/widgets/custom_bottom_bar.dart';
 import 'package:itho_new/widgets/custom_icon_button.dart';
+import 'package:itho_new/presentation/log_out_pop_up_dialog/log_out_pop_up_dialog.dart';
+import 'package:itho_new/presentation/log_out_pop_up_dialog/controller/log_out_pop_up_controller.dart';
 
 class ProfileScreen extends GetWidget<ProfileController> {
   @override
@@ -23,7 +25,7 @@ class ProfileScreen extends GetWidget<ProfileController> {
                         begin: Alignment(-0.2, 0.46),
                         end: Alignment(0.72, 0.86),
                         colors: [
-                      ColorConstant.blue60001,
+                      ColorConstant.blue600,
                       ColorConstant.blue700
                     ])),
                 child: SingleChildScrollView(
@@ -139,7 +141,7 @@ class ProfileScreen extends GetWidget<ProfileController> {
                                                           TextOverflow.ellipsis,
                                                       textAlign: TextAlign.left,
                                                       style: AppStyle
-                                                          .txtRalewaySemiBold16Gray90001
+                                                          .txtRalewaySemiBold16
                                                           .copyWith(
                                                               height:
                                                                   getVerticalSize(
@@ -184,7 +186,7 @@ class ProfileScreen extends GetWidget<ProfileController> {
                                                           textAlign:
                                                               TextAlign.left,
                                                           style: AppStyle
-                                                              .txtRalewaySemiBold16Gray90001
+                                                              .txtRalewaySemiBold16
                                                               .copyWith(
                                                                   height:
                                                                       getVerticalSize(
@@ -230,7 +232,7 @@ class ProfileScreen extends GetWidget<ProfileController> {
                                                           textAlign:
                                                               TextAlign.left,
                                                           style: AppStyle
-                                                              .txtRalewaySemiBold16Gray90001
+                                                              .txtRalewaySemiBold16
                                                               .copyWith(
                                                                   height:
                                                                       getVerticalSize(
@@ -274,7 +276,7 @@ class ProfileScreen extends GetWidget<ProfileController> {
                                                           textAlign:
                                                               TextAlign.left,
                                                           style: AppStyle
-                                                              .txtRalewaySemiBold16Gray90001
+                                                              .txtRalewaySemiBold16
                                                               .copyWith(
                                                                   height:
                                                                       getVerticalSize(
@@ -295,47 +297,56 @@ class ProfileScreen extends GetWidget<ProfileController> {
                                             decoration: BoxDecoration(
                                                 color:
                                                     ColorConstant.blueGray50)),
-                                        Padding(
-                                            padding:
-                                                getPadding(top: 13, bottom: 74),
-                                            child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  CustomIconButton(
-                                                      height: 43,
-                                                      width: 43,
-                                                      variant: IconButtonVariant
-                                                          .FillRed50,
-                                                      child: CustomImageView(
-                                                          svgPath: ImageConstant
-                                                              .imgMinimize)),
-                                                  Padding(
-                                                      padding: getPadding(
-                                                          left: 18,
-                                                          top: 13,
-                                                          bottom: 10),
-                                                      child: Text(
-                                                          "lbl_logout2".tr,
-                                                          overflow: TextOverflow
-                                                              .ellipsis,
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          style: AppStyle
-                                                              .txtRalewaySemiBold16RedA200
-                                                              .copyWith(
-                                                                  height:
-                                                                      getVerticalSize(
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapLogout();
+                                            },
+                                            child: Padding(
+                                                padding: getPadding(
+                                                    top: 13, bottom: 74),
+                                                child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      CustomIconButton(
+                                                          height: 43,
+                                                          width: 43,
+                                                          variant:
+                                                              IconButtonVariant
+                                                                  .FillRed50,
+                                                          child: CustomImageView(
+                                                              svgPath: ImageConstant
+                                                                  .imgMinimize)),
+                                                      Padding(
+                                                          padding: getPadding(
+                                                              left: 18,
+                                                              top: 13,
+                                                              bottom: 10),
+                                                          child: Text(
+                                                              "lbl_logout2".tr,
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: AppStyle
+                                                                  .txtRalewaySemiBold16RedA200
+                                                                  .copyWith(
+                                                                      height: getVerticalSize(
                                                                           1.00)))),
-                                                  Spacer(),
-                                                  CustomImageView(
-                                                      svgPath: ImageConstant
-                                                          .imgArrowright,
-                                                      height: getSize(24.00),
-                                                      width: getSize(24.00),
-                                                      margin: getMargin(
-                                                          top: 10, bottom: 9))
-                                                ]))
+                                                      Spacer(),
+                                                      CustomImageView(
+                                                          svgPath: ImageConstant
+                                                              .imgArrowright,
+                                                          height:
+                                                              getSize(24.00),
+                                                          width: getSize(24.00),
+                                                          margin: getMargin(
+                                                              top: 10,
+                                                              bottom: 9))
+                                                    ])))
                                       ]))
                             ])))),
             bottomNavigationBar:
@@ -382,5 +393,18 @@ class ProfileScreen extends GetWidget<ProfileController> {
     if (!await launch(url)) {
       throw 'Could not launch https://twitter.com/login/';
     }
+  }
+
+  onTapLogout() {
+    Get.dialog(AlertDialog(
+      backgroundColor: Colors.transparent,
+      contentPadding: EdgeInsets.zero,
+      insetPadding: EdgeInsets.only(left: 0),
+      content: LogOutPopUpDialog(
+        Get.put(
+          LogOutPopUpController(),
+        ),
+      ),
+    ));
   }
 }

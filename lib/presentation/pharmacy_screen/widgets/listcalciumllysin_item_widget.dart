@@ -26,8 +26,8 @@ class ListcalciumllysinItemWidget extends StatelessWidget {
             right: 7,
             bottom: 8,
           ),
-          decoration: AppDecoration.outlineBluegray50.copyWith(
-            borderRadius: BorderRadiusStyle.roundedBorder11,
+          decoration: AppDecoration.outlineBluegray501.copyWith(
+            borderRadius: BorderRadiusStyle.roundedBorder10,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -75,7 +75,7 @@ class ListcalciumllysinItemWidget extends StatelessWidget {
                   "lbl_75ml".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtRalewayMedium12Gray500.copyWith(
+                  style: AppStyle.txtRalewayMedium12.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),
@@ -156,7 +156,7 @@ class ListcalciumllysinItemWidget extends StatelessWidget {
                                 bottom: 6,
                               ),
                               decoration: BoxDecoration(
-                                color: ColorConstant.gray70001,
+                                color: ColorConstant.gray700,
                               ),
                             ),
                           ),

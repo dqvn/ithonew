@@ -19,8 +19,8 @@ class OnboardingOneScreen extends GetWidget<OnboardingOneController> {
                         begin: Alignment(-0.5, 0),
                         end: Alignment(-0.5, 1),
                         colors: [
-                      ColorConstant.blue700,
-                      ColorConstant.whiteA700
+                      ColorConstant.blue600,
+                      ColorConstant.blue700
                     ])),
                 child: Container(
                     width: size.width,
@@ -35,7 +35,7 @@ class OnboardingOneScreen extends GetWidget<OnboardingOneController> {
                           Container(
                               width: size.width,
                               padding: getPadding(
-                                  left: 33, top: 33, right: 33, bottom: 55),
+                                  left: 33, top: 31, right: 33, bottom: 35),
                               decoration: AppDecoration.fillWhiteA700.copyWith(
                                   borderRadius:
                                       BorderRadiusStyle.customBorderTL64),
@@ -45,9 +45,9 @@ class OnboardingOneScreen extends GetWidget<OnboardingOneController> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Container(
-                                        width: getHorizontalSize(255.00),
+                                        width: getHorizontalSize(267.00),
                                         margin: getMargin(left: 11),
-                                        child: Text("msg_t_m_th_uy_t_n_v".tr,
+                                        child: Text("msg_b_n_c_n_th_t_m".tr,
                                             maxLines: null,
                                             textAlign: TextAlign.left,
                                             style: AppStyle.txtRalewayBold22
@@ -66,7 +66,7 @@ class OnboardingOneScreen extends GetWidget<OnboardingOneController> {
                                                 effect: ScrollingDotsEffect(
                                                     spacing: 4,
                                                     activeDotColor:
-                                                        ColorConstant.blue600,
+                                                        ColorConstant.blue60001,
                                                     dotColor:
                                                         ColorConstant.blue100,
                                                     dotHeight:
@@ -75,7 +75,7 @@ class OnboardingOneScreen extends GetWidget<OnboardingOneController> {
                                                         8.00))))),
                                     Padding(
                                         padding: getPadding(
-                                            top: 54, right: 9, bottom: 2),
+                                            top: 54, right: 9, bottom: 4),
                                         child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
