@@ -17,8 +17,8 @@ class Listunsplash86rvjm9zowyItemWidget extends StatelessWidget {
       padding: getPadding(
         all: 5,
       ),
-      decoration: AppDecoration.outlineBluegray50.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder8,
+      decoration: AppDecoration.outlineBluegray501.copyWith(
+        borderRadius: BorderRadiusStyle.roundedBorder10,
       ),
       child: Row(
         children: [
@@ -58,7 +58,7 @@ class Listunsplash86rvjm9zowyItemWidget extends StatelessWidget {
                     "msg_the_25_healthiest".tr,
                     maxLines: null,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtRalewaySemiBold12Gray90001.copyWith(
+                    style: AppStyle.txtRalewaySemiBold12.copyWith(
                       height: getVerticalSize(
                         1.14,
                       ),

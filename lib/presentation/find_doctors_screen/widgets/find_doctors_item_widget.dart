@@ -22,7 +22,7 @@ class FindDoctorsItemWidget extends StatelessWidget {
           margin: EdgeInsets.all(0),
           color: ColorConstant.blue5001,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadiusStyle.roundedBorder8,
+            borderRadius: BorderRadiusStyle.roundedBorder10,
           ),
           child: Container(
             height: getVerticalSize(
@@ -38,7 +38,7 @@ class FindDoctorsItemWidget extends StatelessWidget {
               bottom: 12,
             ),
             decoration: AppDecoration.outlineBlack90019.copyWith(
-              borderRadius: BorderRadiusStyle.roundedBorder8,
+              borderRadius: BorderRadiusStyle.roundedBorder10,
             ),
             child: Stack(
               children: [

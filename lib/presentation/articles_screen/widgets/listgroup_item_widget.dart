@@ -29,7 +29,7 @@ class ListgroupItemWidget extends StatelessWidget {
             right: 28,
             bottom: 15,
           ),
-          decoration: AppDecoration.txtFillBlue600.copyWith(
+          decoration: AppDecoration.txtFillBlue60001.copyWith(
             borderRadius: BorderRadiusStyle.txtRoundedBorder10,
           ),
           child: Text(

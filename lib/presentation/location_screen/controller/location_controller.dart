@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class LocationController extends GetxController {
   TextEditingController searchController = TextEditingController();
 
-  TextEditingController groupFourteenController = TextEditingController();
+  TextEditingController group167Controller = TextEditingController();
 
   Rx<LocationModel> locationModelObj = LocationModel().obs;
 
@@ -20,6 +20,6 @@ class LocationController extends GetxController {
   void onClose() {
     super.onClose();
     searchController.dispose();
-    groupFourteenController.dispose();
+    group167Controller.dispose();
   }
 }

@@ -55,7 +55,7 @@ class ResetPasswordEmailTabContainerScreen
                   "msg_enter_your_email2".tr,
                   maxLines: null,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtRalewayMedium16Bluegray300.copyWith(
+                  style: AppStyle.txtRalewayMedium16.copyWith(
                     height: getVerticalSize(
                       1.28,
                     ),
@@ -88,7 +88,7 @@ class ResetPasswordEmailTabContainerScreen
                     text: "lbl_phone".tr,
                   ),
                 ],
-                labelColor: ColorConstant.blue600,
+                labelColor: ColorConstant.blue60001,
                 unselectedLabelColor: ColorConstant.blueGray400,
                 indicator: BoxDecoration(
                   color: ColorConstant.whiteA700,

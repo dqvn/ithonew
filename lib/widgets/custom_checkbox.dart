@@ -89,7 +89,7 @@ class CustomCheckbox extends StatelessWidget {
       default:
         return RoundedRectangleBorder(
           side: BorderSide(
-            color: ColorConstant.blueGray100,
+            color: ColorConstant.blueGray10001,
             width: 1,
           ),
           borderRadius: _setOutlineBorderRadius(),
@@ -101,7 +101,7 @@ class CustomCheckbox extends StatelessWidget {
     switch (fontStyle) {
       default:
         return TextStyle(
-          color: ColorConstant.blueGray800,
+          color: ColorConstant.blueGray80001,
           fontSize: getFontSize(
             14,
           ),
@@ -114,6 +114,6 @@ class CustomCheckbox extends StatelessWidget {
 
 enum CheckboxShape { RoundedBorder8 }
 
-enum CheckboxVariant { OutlineBluegray100 }
+enum CheckboxVariant { OutlineBluegray10001 }
 
-enum CheckboxFontStyle { InterRegular14 }
+enum CheckboxFontStyle { InterRegular14Bluegray80001 }

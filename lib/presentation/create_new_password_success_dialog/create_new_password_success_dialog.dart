@@ -33,7 +33,7 @@ class CreateNewPasswordSuccessDialog extends StatelessWidget {
             ),
             color: ColorConstant.gray50,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusStyle.circleBorder51,
+              borderRadius: BorderRadiusStyle.roundedBorder51,
             ),
             child: Container(
               height: getSize(
@@ -49,7 +49,7 @@ class CreateNewPasswordSuccessDialog extends StatelessWidget {
                 bottom: 36,
               ),
               decoration: AppDecoration.fillGray50.copyWith(
-                borderRadius: BorderRadiusStyle.circleBorder51,
+                borderRadius: BorderRadiusStyle.roundedBorder51,
               ),
               child: Stack(
                 children: [

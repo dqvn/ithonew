@@ -60,7 +60,8 @@ class FindDoctorsScreen extends GetWidget<FindDoctorsController> {
                   left: 1,
                 ),
                 variant: TextFormFieldVariant.OutlineGray200_1,
-                fontStyle: TextFormFieldFontStyle.RalewayRegular12,
+                padding: TextFormFieldPadding.PaddingT16,
+                fontStyle: TextFormFieldFontStyle.RalewayRegular12Gray500,
                 textInputAction: TextInputAction.done,
                 prefix: Container(
                   margin: getMargin(
@@ -141,7 +142,7 @@ class FindDoctorsScreen extends GetWidget<FindDoctorsController> {
                   "msg_recommended_doctors".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtRalewaySemiBold18Gray900.copyWith(
+                  style: AppStyle.txtRalewaySemiBold18.copyWith(
                     letterSpacing: getHorizontalSize(
                       0.30,
                     ),
@@ -161,8 +162,8 @@ class FindDoctorsScreen extends GetWidget<FindDoctorsController> {
                   top: 16,
                   bottom: 16,
                 ),
-                decoration: AppDecoration.outlineBluegray50.copyWith(
-                  borderRadius: BorderRadiusStyle.roundedBorder15,
+                decoration: AppDecoration.outlineBluegray501.copyWith(
+                  borderRadius: BorderRadiusStyle.roundedBorder16,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -198,7 +199,8 @@ class FindDoctorsScreen extends GetWidget<FindDoctorsController> {
                             "msg_dr_marcus_horizon".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
-                            style: AppStyle.txtRalewaySemiBold16.copyWith(
+                            style:
+                                AppStyle.txtRalewaySemiBold16Gray900.copyWith(
                               height: getVerticalSize(
                                 1.28,
                               ),
@@ -268,7 +270,8 @@ class FindDoctorsScreen extends GetWidget<FindDoctorsController> {
                                     "lbl_4_7".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
-                                    style: AppStyle.txtRalewayMedium12.copyWith(
+                                    style: AppStyle.txtRalewayMedium12Amber500
+                                        .copyWith(
                                       height: getVerticalSize(
                                         1.00,
                                       ),
@@ -285,7 +288,7 @@ class FindDoctorsScreen extends GetWidget<FindDoctorsController> {
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle
-                                        .txtRalewayMedium14Bluegray80001
+                                        .txtRalewayMedium14Bluegray800
                                         .copyWith(
                                       height: getVerticalSize(
                                         1.00,
@@ -311,7 +314,7 @@ class FindDoctorsScreen extends GetWidget<FindDoctorsController> {
                   "msg_your_recent_doctors".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtRalewaySemiBold18Gray900.copyWith(
+                  style: AppStyle.txtRalewaySemiBold18.copyWith(
                     height: getVerticalSize(
                       1.15,
                     ),

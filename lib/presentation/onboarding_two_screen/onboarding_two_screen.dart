@@ -19,7 +19,7 @@ class OnboardingTwoScreen extends GetWidget<OnboardingTwoController> {
                         begin: Alignment(-0.5, 0),
                         end: Alignment(-0.5, 1),
                         colors: [
-                      ColorConstant.blue60001,
+                      ColorConstant.blue600,
                       ColorConstant.blue700
                     ])),
                 child: Container(
@@ -35,47 +35,45 @@ class OnboardingTwoScreen extends GetWidget<OnboardingTwoController> {
                           Container(
                               width: size.width,
                               padding: getPadding(
-                                  left: 33, top: 31, right: 33, bottom: 35),
+                                  left: 18, top: 28, right: 18, bottom: 28),
                               decoration: AppDecoration.fillWhiteA700.copyWith(
                                   borderRadius:
                                       BorderRadiusStyle.customBorderTL64),
                               child: Column(
                                   mainAxisSize: MainAxisSize.min,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Container(
-                                        width: getHorizontalSize(271.00),
-                                        margin: getMargin(left: 9),
-                                        child: Text("msg_gi_i_quy_t_m_i_v_n".tr,
+                                        width: getHorizontalSize(327.00),
+                                        child: Text("msg_b_n_l_th_ng".tr,
                                             maxLines: null,
                                             textAlign: TextAlign.left,
                                             style: AppStyle.txtRalewayBold22
                                                 .copyWith(
                                                     height: getVerticalSize(
                                                         1.15)))),
-                                    Align(
-                                        alignment: Alignment.center,
-                                        child: Container(
-                                            height: getVerticalSize(8.00),
-                                            margin: getMargin(top: 12),
-                                            child: SmoothIndicator(
-                                                offset: 1,
-                                                count: 3,
-                                                axisDirection: Axis.horizontal,
-                                                effect: ScrollingDotsEffect(
-                                                    spacing: 4,
-                                                    activeDotColor:
-                                                        ColorConstant.blue600,
-                                                    dotColor:
-                                                        ColorConstant.blue100,
-                                                    dotHeight:
-                                                        getVerticalSize(8.00),
-                                                    dotWidth: getHorizontalSize(
-                                                        8.00))))),
+                                    Container(
+                                        height: getVerticalSize(8.00),
+                                        margin: getMargin(top: 15),
+                                        child: SmoothIndicator(
+                                            offset: 0,
+                                            count: 3,
+                                            axisDirection: Axis.horizontal,
+                                            effect: ScrollingDotsEffect(
+                                                spacing: 4,
+                                                activeDotColor:
+                                                    ColorConstant.blue60001,
+                                                dotColor: ColorConstant.blue100,
+                                                dotHeight:
+                                                    getVerticalSize(8.00),
+                                                dotWidth:
+                                                    getHorizontalSize(8.00)))),
                                     Padding(
                                         padding: getPadding(
-                                            top: 54, right: 9, bottom: 4),
+                                            left: 15,
+                                            top: 54,
+                                            right: 24,
+                                            bottom: 7),
                                         child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,

@@ -26,8 +26,8 @@ class Listef58faa9a71e47eItemWidget extends StatelessWidget {
             right: 7,
             bottom: 10,
           ),
-          decoration: AppDecoration.outlineBluegray50.copyWith(
-            borderRadius: BorderRadiusStyle.roundedBorder11,
+          decoration: AppDecoration.outlineBluegray501.copyWith(
+            borderRadius: BorderRadiusStyle.roundedBorder10,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -77,7 +77,7 @@ class Listef58faa9a71e47eItemWidget extends StatelessWidget {
                   "lbl_20pcs".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtRalewayMedium12Gray500.copyWith(
+                  style: AppStyle.txtRalewayMedium12.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),

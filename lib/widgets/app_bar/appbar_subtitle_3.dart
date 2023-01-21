@@ -23,7 +23,7 @@ class AppbarSubtitle3 extends StatelessWidget {
           text,
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.left,
-          style: AppStyle.txtRalewaySemiBold16Gray90001.copyWith(
+          style: AppStyle.txtRalewaySemiBold16.copyWith(
             height: getVerticalSize(
               1.00,
             ),

@@ -21,7 +21,7 @@ class HomeItemWidget extends StatelessWidget {
         bottom: 8,
       ),
       decoration: AppDecoration.outlineGray2001.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder8,
+        borderRadius: BorderRadiusStyle.roundedBorder10,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -82,7 +82,7 @@ class HomeItemWidget extends StatelessWidget {
                             "lbl_4_7".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
-                            style: AppStyle.txtRalewayMedium12.copyWith(
+                            style: AppStyle.txtRalewayMedium12Amber500.copyWith(
                               height: getVerticalSize(
                                 1.00,
                               ),
@@ -104,7 +104,7 @@ class HomeItemWidget extends StatelessWidget {
               "msg_dr_marcus_horizon".tr,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.left,
-              style: AppStyle.txtRalewaySemiBold16Gray700.copyWith(
+              style: AppStyle.txtRalewaySemiBold16Gray70001.copyWith(
                 height: getVerticalSize(
                   1.00,
                 ),

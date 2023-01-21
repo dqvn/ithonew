@@ -22,7 +22,7 @@ class ScheduleItemWidget extends StatelessWidget {
         bottom: 14,
       ),
       decoration: AppDecoration.outlineGray200.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder8,
+        borderRadius: BorderRadiusStyle.roundedBorder10,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -49,7 +49,7 @@ class ScheduleItemWidget extends StatelessWidget {
                         "msg_dr_marcus_horizon".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtRalewaySemiBold18.copyWith(
+                        style: AppStyle.txtRalewaySemiBold18Gray90001.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),
@@ -63,7 +63,7 @@ class ScheduleItemWidget extends StatelessWidget {
                           "lbl_chardiologist".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtRalewayMedium12Gray500.copyWith(
+                          style: AppStyle.txtRalewayMedium12.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),
@@ -117,7 +117,7 @@ class ScheduleItemWidget extends StatelessWidget {
                     "lbl_26_06_2022".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtRalewayMedium12Gray700.copyWith(
+                    style: AppStyle.txtRalewayMedium12Gray70001.copyWith(
                       height: getVerticalSize(
                         1.00,
                       ),
@@ -145,7 +145,7 @@ class ScheduleItemWidget extends StatelessWidget {
                     "lbl_10_30_am".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtRalewayMedium12Gray700.copyWith(
+                    style: AppStyle.txtRalewayMedium12Gray70001.copyWith(
                       height: getVerticalSize(
                         1.00,
                       ),
@@ -182,7 +182,7 @@ class ScheduleItemWidget extends StatelessWidget {
                     "lbl_confirmed".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtRalewayMedium12Gray700.copyWith(
+                    style: AppStyle.txtRalewayMedium12Gray70001.copyWith(
                       height: getVerticalSize(
                         1.00,
                       ),
@@ -204,15 +204,15 @@ class ScheduleItemWidget extends StatelessWidget {
                   height: 46,
                   width: 145,
                   text: "lbl_cancel".tr,
-                  variant: ButtonVariant.FillGray10002,
-                  fontStyle: ButtonFontStyle.RalewaySemiBold14Gray700,
+                  variant: ButtonVariant.FillGray10001,
+                  fontStyle: ButtonFontStyle.RalewaySemiBold14Gray70001,
                 ),
                 CustomButton(
                   height: 46,
                   width: 145,
                   text: "lbl_reschedule".tr,
                   variant: ButtonVariant.FillBlue6006c,
-                  fontStyle: ButtonFontStyle.RalewaySemiBold14Blue600,
+                  fontStyle: ButtonFontStyle.RalewaySemiBold14Blue60001,
                 ),
               ],
             ),

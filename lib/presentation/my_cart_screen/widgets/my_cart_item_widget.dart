@@ -5,11 +5,13 @@ import 'package:itho_new/core/app_export.dart';
 
 // ignore: must_be_immutable
 class MyCartItemWidget extends StatelessWidget {
-  MyCartItemWidget(this.myCartItemModelObj);
+  MyCartItemWidget(this.myCartItemModelObj, {this.onTapColumnobhcombi});
 
   MyCartItemModel myCartItemModelObj;
 
   var controller = Get.find<MyCartController>();
+
+  VoidCallback? onTapColumnobhcombi;
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +19,8 @@ class MyCartItemWidget extends StatelessWidget {
       padding: getPadding(
         all: 14,
       ),
-      decoration: AppDecoration.outlineBluegray50.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder11,
+      decoration: AppDecoration.outlineBluegray501.copyWith(
+        borderRadius: BorderRadiusStyle.roundedBorder10,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,36 +55,41 @@ class MyCartItemWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          "lbl_obh_combi".tr,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: AppStyle.txtInterRegular18.copyWith(
-                            height: getVerticalSize(
-                              1.00,
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: getPadding(
-                            top: 3,
-                          ),
-                          child: Text(
-                            "lbl_75ml".tr,
+                    GestureDetector(
+                      onTap: () {
+                        onTapColumnobhcombi!();
+                      },
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "lbl_obh_combi".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
-                            style: AppStyle.txtInterRegular12Gray500.copyWith(
+                            style: AppStyle.txtInterRegular18.copyWith(
                               height: getVerticalSize(
                                 1.00,
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: getPadding(
+                              top: 3,
+                            ),
+                            child: Text(
+                              "lbl_75ml".tr,
+                              overflow: TextOverflow.ellipsis,
+                              textAlign: TextAlign.left,
+                              style: AppStyle.txtInterRegular12.copyWith(
+                                height: getVerticalSize(
+                                  1.00,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     CustomImageView(
                       svgPath: ImageConstant.imgTrashGray500,

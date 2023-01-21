@@ -7,7 +7,7 @@ class SplashScreen extends GetWidget<SplashController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: ColorConstant.blue600,
+            backgroundColor: ColorConstant.blue60001,
             body: Container(
                 width: size.width,
                 child: Column(
@@ -27,7 +27,8 @@ class SplashScreen extends GetWidget<SplashController> {
                                 Text("lbl_ith".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
-                                    style: AppStyle.txtSairaStencilOneRegular55
+                                    style: AppStyle
+                                        .txtSairaStencilOneRegular55WhiteA700
                                         .copyWith(
                                             letterSpacing:
                                                 getHorizontalSize(5.00),

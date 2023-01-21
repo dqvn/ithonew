@@ -107,33 +107,42 @@ class CustomButton extends StatelessWidget {
         );
       default:
         return getPadding(
-          all: 16,
+          all: 14,
         );
     }
   }
 
   _setColor() {
     switch (variant) {
+      case ButtonVariant.OutlineBlueA200:
+        return ColorConstant.green600;
       case ButtonVariant.FillWhiteA700:
         return ColorConstant.whiteA700;
-      case ButtonVariant.FillGray10002:
-        return ColorConstant.gray10002;
-      case ButtonVariant.FillBlue6006c:
-        return ColorConstant.blue6006c;
       case ButtonVariant.FillRedA200:
         return ColorConstant.redA200;
-      case ButtonVariant.OutlineBlue600:
+      case ButtonVariant.FillGray10001:
+        return ColorConstant.gray10001;
+      case ButtonVariant.FillBlue6006c:
+        return ColorConstant.blue6006c;
+      case ButtonVariant.OutlineBlue60001:
         return null;
       default:
-        return ColorConstant.blue600;
+        return ColorConstant.blue60001;
     }
   }
 
   _setTextButtonBorder() {
     switch (variant) {
-      case ButtonVariant.OutlineBlue600:
+      case ButtonVariant.OutlineBlue60001:
         return BorderSide(
-          color: ColorConstant.blue600,
+          color: ColorConstant.blue60001,
+          width: getHorizontalSize(
+            2.00,
+          ),
+        );
+      case ButtonVariant.OutlineBlueA200:
+        return BorderSide(
+          color: ColorConstant.blueA200,
           width: getHorizontalSize(
             1.00,
           ),
@@ -168,14 +177,32 @@ class CustomButton extends StatelessWidget {
           fontFamily: 'Inter',
           fontWeight: FontWeight.w600,
         );
-      case ButtonFontStyle.RalewaySemiBold16Blue600:
+      case ButtonFontStyle.RalewaySemiBold20:
         return TextStyle(
-          color: ColorConstant.blue600,
+          color: ColorConstant.whiteA700,
           fontSize: getFontSize(
-            16,
+            20,
           ),
           fontFamily: 'Raleway',
           fontWeight: FontWeight.w600,
+        );
+      case ButtonFontStyle.RalewaySemiBold20Blue60001:
+        return TextStyle(
+          color: ColorConstant.blue60001,
+          fontSize: getFontSize(
+            20,
+          ),
+          fontFamily: 'Raleway',
+          fontWeight: FontWeight.w600,
+        );
+      case ButtonFontStyle.RalewayRomanBold20:
+        return TextStyle(
+          color: ColorConstant.whiteA700,
+          fontSize: getFontSize(
+            20,
+          ),
+          fontFamily: 'Raleway',
+          fontWeight: FontWeight.w700,
         );
       case ButtonFontStyle.RalewayRegular16:
         return TextStyle(
@@ -195,18 +222,18 @@ class CustomButton extends StatelessWidget {
           fontFamily: 'Raleway',
           fontWeight: FontWeight.w600,
         );
-      case ButtonFontStyle.RalewaySemiBold14Gray700:
+      case ButtonFontStyle.RalewaySemiBold14Gray70001:
         return TextStyle(
-          color: ColorConstant.gray700,
+          color: ColorConstant.gray70001,
           fontSize: getFontSize(
             14,
           ),
           fontFamily: 'Raleway',
           fontWeight: FontWeight.w600,
         );
-      case ButtonFontStyle.RalewaySemiBold14Blue600:
+      case ButtonFontStyle.RalewaySemiBold14Blue60001:
         return TextStyle(
-          color: ColorConstant.blue600,
+          color: ColorConstant.blue60001,
           fontSize: getFontSize(
             14,
           ),
@@ -246,21 +273,24 @@ enum ButtonPadding {
 }
 
 enum ButtonVariant {
-  FillBlue600,
-  OutlineBlue600,
+  FillBlue60001,
+  OutlineBlue60001,
+  OutlineBlueA200,
   FillWhiteA700,
-  FillGray10002,
-  FillBlue6006c,
   FillRedA200,
+  FillGray10001,
+  FillBlue6006c,
 }
 
 enum ButtonFontStyle {
   RalewaySemiBold16,
   InterSemiBold16,
-  RalewaySemiBold16Blue600,
+  RalewaySemiBold20,
+  RalewaySemiBold20Blue60001,
+  RalewayRomanBold20,
   RalewayRegular16,
   RalewaySemiBold14,
-  RalewaySemiBold14Gray700,
-  RalewaySemiBold14Blue600,
+  RalewaySemiBold14Gray70001,
+  RalewaySemiBold14Blue60001,
   InterRegular14,
 }

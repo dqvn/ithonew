@@ -65,7 +65,7 @@ class ResetPasswordVerifyCodeScreen
                       TextSpan(
                         text: "msg_enter_code_that2".tr,
                         style: TextStyle(
-                          color: ColorConstant.fromHex("#a0a7b0"),
+                          color: ColorConstant.blueGray300,
                           fontSize: getFontSize(
                             16,
                           ),
@@ -79,7 +79,7 @@ class ResetPasswordVerifyCodeScreen
                       TextSpan(
                         text: "lbl_08528188".tr,
                         style: TextStyle(
-                          color: ColorConstant.fromHex("#101522"),
+                          color: ColorConstant.gray900,
                           fontSize: getFontSize(
                             16,
                           ),
@@ -141,9 +141,9 @@ class ResetPasswordVerifyCodeScreen
                       selectedFillColor: ColorConstant.whiteA700,
                       activeFillColor: ColorConstant.whiteA700,
                       inactiveFillColor: ColorConstant.whiteA700,
-                      inactiveColor: ColorConstant.blue600,
-                      selectedColor: ColorConstant.blue600,
-                      activeColor: ColorConstant.blue600,
+                      inactiveColor: ColorConstant.blue60001,
+                      selectedColor: ColorConstant.blue60001,
+                      activeColor: ColorConstant.blue60001,
                     ),
                   ),
                 ),
